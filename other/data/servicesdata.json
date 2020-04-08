@@ -1,0 +1,43 @@
+[
+  {
+    "identifier": "s001", 
+    "name": "Echocardiography",
+    "description": "Echocardiography is a method of studying heart and blood flow (through the valves) by ultrasounds.<br>Unlike radiations used in radiology, ultrasounds are harmless, so no precaution is required and the examination can be performed on any patient countless times (even on pregnant women).<br>Echocardiography provides detailed information on the size and functions of the heart and valve organs.<br>It does not require any preparation and there are no specific side effects: anyone can undergo this examination.",
+    "responsible": "d001",
+    "relateddoctors": "d006",
+    "locations": "l001nl002nl003"
+
+  },
+  {
+    "identifier": "s002",
+    "name": "Electroencephalogram",
+    "description": "Electroencephalogram (EEG) is a diagnostic test that, through some electrodes positioned on the scalp, measures brain electrical activity by reproducing it on a screen in the form of a series of waves.<br>The electroencephalogram is used primarily for the diagnosis and monitoring of epilepsy.<br>It is also often prescribed for cancer patients because both primitive brain tumors and any brain metastases caused by other organs can cause epilepsy.<br>It is also indicated in the presence of a suspected inflammation of the nervous system and to diagnose sleep disturbances.<br>Finally, it may be useful as a complementary examination in case of headache, cranial traumas and other neurological diseases.",
+    "responsible": "d002",
+    "relateddoctors": "d007",
+    "locations": "l001nl003"
+  },
+  {
+    "identifier": "s003",
+    "name": "Radiography",
+    "description": "Radiography is an examination by which you get an image of the body parts that are x-rayed (ionizing radiations).<br>It is one of the most common and most ancient diagnostic tests.<br>It is widely used in chest evaluation (possibility of highlighting infectious outbreaks, pulmonary congestion, pleural effusions) and of the entire osteoarthritis (fracture, bone cancer, osteoarthritis).<br>There are no particular restrictions for this type of examination.<br>Women of childbearing age must be able to safely exclude the presence of a pregnancy: ionizing radiation can in fact be harmful to the fetus.<br>In the case of pregnancy, the survey is performed only if absolutely necessary and not replaceable with other methods that do not use ionizing radiation.",
+    "responsible": "d003",
+    "relateddoctors": "d008",
+    "locations": "l001"
+  },
+  {
+    "identifier": "s004",
+    "name": "Oral Care Service",
+    "description": "Our oral care services provide professional dental cleaning.<br>Professional dental cleaning is a therapeutic procedure indicated to remove obstinate plaque and tartar deposits on your teeth.<br>Performed by specialized hygienists, dental cleaning is extremely important and equally effective to keep your teeth healthy, safeguarding them from caries and other dental and gum diseases, such as pyorrhea and gingivitis.<br>Daily oral hygiene, though meticulously carried out, is not enough to completely remove the plaque and tartar from the teeth.<br>In fact, home dental cleaning only relieves bacteria and residues of food deposited on the tooth enamel or plunged into the interdental spaces, yet it does not eliminate plaque and tartar hidden beneath the gum or in areas hard to reach from the toothbrush.<br>Professional dental cleaning is extremely beneficial because, in addition to preventing numerous dental and gum diseases, it ensures the teeth an enviable state of health even in the long run.",
+    "responsible": "d004",
+    "relateddoctors": "d009",
+    "locations": "l001nl002nl003"
+  },
+  {
+    "identifier": "s005",
+    "name": "Eye Examination",
+    "description": "The eye is our most important sense organ.<br>For this, an optimal vision is fundamental.<br>Many people do not undergo periodic checks of sight, although this is an essential prerequisite to ensure an optimal vision.<br>After all, our eyes, and therefore our vision, are subject to a process of constant change over the years, often without any notice.<br>The first signs of a deterioration of vision are not always a blurred vision.<br>Even a headache or visual fatigue in the evening hours may indicate a visual deficit.<br>Our visual checkup is divided into three parts: visual acuity test, contrast view test, and color vision testing.",
+    "responsible": "d005",
+    "relateddoctors": "d010",
+    "locations": "l001nl002"
+  }
+]

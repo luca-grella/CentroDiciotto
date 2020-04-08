@@ -1,0 +1,32 @@
+[
+  {
+    "identifier": "l001",
+    "name": "Centro Diciotto Milano",
+    "city": "Milano",
+    "region": "Lombardia",
+    "description": "Centro Diciotto Milano represents our society from the very beginning of our history as health care services distributors, therefore it has been our headquarters since its foundation in 1995. We are glad to assert that the qualified doctors and the special health services that you can find here let us become one of the most prestigious clinics in Lombardia. In this page you will find the services and the staff that you will be able to meet coming in this center.",
+    "address": "Via+Libera,+Milano",
+    "doctors": "d001nd002nd003nd004",
+    "services": "s001ns002ns003ns004ns005"
+  },
+  {
+    "identifier": "l002",
+    "name": "Centro Diciotto Roma",
+    "city": "Roma",
+    "region": "Lazio",
+    "description": "Centro Diciotto Roma was founded in 2002 as a result of the great feedback we received from our first clinic in Milano.We decided to build this center in order to expand our national coverage. In this page you will find the services and the staff that you will be able to meet coming in this center.",
+    "address": "Piazzale+dell+umanesimo,+10,+Roma",
+    "doctors": "d005nd006nd007",
+    "services": "s001ns004ns005"
+  },
+  {
+    "identifier": "l003",
+    "name": "Centro Diciotto Firenze",
+    "city": "Firenze",
+    "region": "Toscana",
+    "description": "Centro Diciotto Firenze is our newest center: from the very beginning of its foundation, which occurred in 2013, it stood out for its cutting-edge technologies and its modern facilities. In this page you will find the services and the staff that you will be able to meet coming in this center.",
+    "address": "Piazza+Santa+Maria+Nuova,+1,+Firenze",
+    "doctors": "d008nd009nd010nd011",
+    "services": "s001ns002ns004"
+  }
+]
