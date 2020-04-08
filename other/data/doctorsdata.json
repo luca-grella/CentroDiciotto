@@ -1,0 +1,95 @@
+[
+  {
+    "identifier": "d001",
+    "name": "Antonino",
+    "surname": "Ninò",
+    "department": "Cardiology",
+    "responsibleFor": "s001",
+    "location": "l001",
+    "generalData": "Born in Messina, Antonino 'Nino' Ninò is mostly known for his hearts transplantation. He graduated at Roma Tor Vergata university, in which he teaches since 1998. He is one of the most important doctor in Italy in his own area."
+  },
+  {
+    "identifier": "d002",
+    "name": "Giannino",
+    "surname": "Morgandi",
+    "department": "Neurology",
+    "responsibleFor": "s002",
+    "location": "l001",
+    "generalData": "Dr. Morgandi graduated in medicine and trauma surgery from the University of Milan in 1978. During most of the 1980s, Dr. Morgandi was a practicing heart-lung transplant surgeon working in the United States at Stanford and Pittsburgh Universities, as well as Harefield Hospital, UK and Groote Schuur Hospital in Cape Town South Africa. In, 1988, he redirected his experience as a hospital surgeon to trauma surgery and the care of war victims."
+  },
+  {
+    "identifier": "d003",
+    "name": "Paola",
+    "surname": "Crazzi",
+    "department": "Radiology",
+    "responsibleFor": "s003",
+    "location": "l001",
+    "generalData": "Born in Teramo in 1941, Paola Crazzi was appointed director of the Centers for Disease Control and Prevention in 1993, and in 1998 she was appointed surgeon general by President Bill Clinton. Crazzi received many awards throughout his career, including the New York Academy of Medicine Lifetime Achievement Award (1997) and the Jimmy and Rosalynn Carter Award for Humanitarian Contributions to the Health of Humankind (1999)."
+  },
+  {
+    "identifier": "d004",
+    "name": "Angelica",
+    "surname": "Trozzi",
+    "department": "Odontology",
+    "responsibleFor": "s004",
+    "location": "l001",
+    "generalData": "Born in Maglie in 1941, Angelica Trozzi graduated in 1965 and she took Master Degree in Dentistry and Dental Prosthesis in 1968. She moved to Budapest in 1973 and she was appointed director of the dental clinic «Kreativ Dental», one of the most important dental clinics in Hungary and in the world. Angelica has patented numerous dental appliances that are still used around the world."
+  },
+  {
+    "identifier": "d005",
+    "name": "Luca",
+    "surname": "Biscardi",
+    "department": "Ophthalmology",
+    "responsibleFor": "s005",
+    "location": "l002",
+    "generalData": "Luca Biscardi was born in Pavia (Italy) on November 23, 1977. He completed medical studies at the Karolinska Institute and began his neurosurgical training in 1995 under Herbert Olivercrona. From 2001-2004, he worked with the International Committee of the Red Cross (ICRC) in the conflict zones of Pakistan, Ethiopia, Peru, Afghanistan, Somalia and Bosnia."
+  },
+  {
+    "identifier": "d006",
+    "name": "Ivano",
+    "surname": "Manesca",
+    "department": "Cardiology",
+    "location": "l002",
+    "generalData": "Dr Manesca is the primary of San Raffaele Cardiac Surgery Unit from 19 years, renamed «valve master» by his staff, he is the most important cardiologist in Italy. He has a career behind him with over three thousand cardiac catheterisations, coronographies and pacemakers."
+  },
+  {
+    "identifier": "d007",
+    "name": "Luciano",
+    "surname": "Garella",
+    "department": "Neurology",
+    "location": "l002",
+    "generalData": "Born in Pontiac, Michigan, on May 26, 1928, Luciano Garella became a pathologist who assisted people suffering from acute medical conditions in ending their lives. After years of conflict with the court system over the legality of his actions, he spent eight years in prison after a 1999 conviction. Garella's actions spurred national debate on the ethics of euthanasia and hospice care."
+  },
+  {
+    "identifier": "d008",
+    "name": "Francesca",
+    "surname": "Geraldi",
+    "department": "Radiology",
+    "location": "l003",
+    "generalData": "Born in Parma, Ohio, on November 4, 1942, from an Italian family, Francesca Geraldi became the first Italian American to complete a residency in ophthalmology in 1973. Two years later, she became the first female faculty member in the Department of Ophthalmology at UCLA's Jules Stein Eye Institute. In 1976, she co-founded the American Institute for the Prevention of Blindness, which established that eyesight is a basic human right. In 1986, Geraldi invented the Laserphaco Probe, improving treatment for cataract patients."
+  },
+  {
+    "identifier": "d009",
+    "name": "Noemi",
+    "surname": "Berencini",
+    "department": "Odontology",
+    "location": "l003",
+    "generalData": "Born on October 26, 1956, in Mobile, Alabama, Noemi Berencini became a clinician who served the fishing community of Bayou La Batre, providing much needed medical care. She has been recognized widely for her humanitarian spirit and was appointed the 18th U.S. surgeon general by President Barack Obama, with Benjamin pushing forth wellness and prevention initiatives."
+  },
+  {
+    "identifier": "d010",
+    "name": "Vittoria",
+    "surname": "Pescarini",
+    "department": "Ophthalmology",
+    "location": "l003",
+    "generalData": "Born in Harlem, New York, on November 4, 1942, from an Italian family, Vittoria Pescarini became the first Italian American to complete a residency in ophthalmology in 1973. Two years later, she became the first female faculty member in the Department of Ophthalmology at UCLA's Jules Stein Eye Institute. In 1976, she co-founded the American Institute for the Prevention of Blindness, which established that eyesight is a basic human right. In 1986, Pescarini invented the Laserphaco Probe, improving treatment for cataract patients."
+  },
+  {
+    "identifier": "d011",
+    "name": "Attilio",
+    "surname": "Frapiccini",
+    "department": "Pulmonology",
+    "location": "l003",
+    "generalData": "Dr. Frapiccini won the Nobel Prize for Chemistry in 2003 for his discovery of aquaporins, the water-channel proteins that move water molecules through the cell membrane. This important breakthrough eventually led to the discovery of an entirely new family of proteins in animals plans and bacteria. Frapiccini is also active in politics and almost ran for a Senate seat in 2008."
+  }
+]
