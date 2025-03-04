@@ -16,7 +16,7 @@
     "lodash": "4.17.4",
     "nodemailer": "^4.0.1",
     "nodemailer-smtp-transport": "^2.7.4",
-    "pg": "6.4.0"
+    "pg": "6.4.2"
   },
   "scripts": {
     "start": "node ./index.js"
