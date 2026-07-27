@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^2.2.2",
+    "body-parser": "^2.3.0",
     "ejs": "^5.0.2",
     "express": "^5.2.1",
     "knex": "^2.4.0",
