@@ -1,1 +1,3 @@
 node_modules/
+other/data/config.json
+.env

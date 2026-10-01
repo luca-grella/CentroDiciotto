@@ -5,10 +5,14 @@ const bodyParser = require("body-parser");
 const sqlDbFactory = require("knex");
 const process = require("process");
 const _ = require("lodash");
-const fs = require('fs');
 const nodemailer = require('nodemailer');
-const config = JSON.parse(fs.readFileSync("./other/data/config.json"));
 var path = require('path');
+
+// mail credentials come from the environment (never commit them):
+// GMAIL_USER, GMAIL_APP_PASSWORD and optionally CONTACT_TO (defaults to GMAIL_USER)
+const mailUser = process.env.GMAIL_USER;
+const mailPass = process.env.GMAIL_APP_PASSWORD;
+const contactTo = process.env.CONTACT_TO || mailUser;
 
 let sqlDb;
 
@@ -164,23 +168,43 @@ let serverPort = process.env.PORT || 5000;
 
 var smtpTransport = nodemailer.createTransport({
   service : "gmail",
-  "secure" : false,
-  "port": 25,
-  host: "smtp.gmail.com",
   auth: {
-    user: config.user,
-    pass: config.password
-  },
-  tls:{
-    rejectUnauthorized: false
+    user: mailUser,
+    pass: mailPass
   }
 });
+
+// simple in-memory rate limit for the contact form: 5 messages per IP per hour
+const SEND_LIMIT = 5;
+const SEND_WINDOW_MS = 60 * 60 * 1000;
+const sendLog = new Map();
+
+function isRateLimited(ip) {
+  const now = Date.now();
+  const recent = (sendLog.get(ip) || []).filter(t => now - t < SEND_WINDOW_MS);
+  if (recent.length >= SEND_LIMIT) {
+    sendLog.set(ip, recent);
+    return true;
+  }
+  recent.push(now);
+  sendLog.set(ip, recent);
+  return false;
+}
+
+const EMAIL_RE = /^[^\s@"<>(),;:\\]+@[^\s@"<>(),;:\\]+\.[^\s@"<>(),;:\\]+$/;
+
+function cleanLine(value, maxLength) {
+  return String(value || "").replace(/[\r\n]+/g, " ").trim().slice(0, maxLength);
+}
 
 //entities from Json files
 let doctorsList = require("./other/data/doctorsdata.json");
 let locationsList = require("./other/data/locationsdata.json");
 let servicesList = require("./other/data/servicesdata.json");
 let whoweareJson = require("./other/data/whoweare.json");
+
+// behind the Heroku router: use the client IP for req.ip (rate limit)
+app.set("trust proxy", 1);
 
 app.use(express.static(__dirname + "/public"));
 
@@ -192,25 +216,40 @@ app.get('/',function(req,res){
     res.sendFile('index.html');
 });
 
-// email sender with nodemailer
-app.get('/send',function(req,res){
-    var mailOptions={
-      from : '"Centro Diciotto" <centrodiciotto118@gmail.com>',
-      username : req.query.username,
-      to : req.query.to,
-      subject : req.query.subject,
-      text : req.query.text
+// contact form: the message always goes to the clinic inbox, the visitor is only the reply-to
+app.post('/send',function(req,res){
+    if (!mailUser || !mailPass) {
+      console.log("Contact form disabled: GMAIL_USER / GMAIL_APP_PASSWORD not set");
+      return res.status(503).send("error");
     }
-    console.log(mailOptions);
+
+    const username = cleanLine(req.body.username, 100);
+    const replyTo = cleanLine(req.body.to, 254);
+    const subject = cleanLine(req.body.subject, 200);
+    const text = String(req.body.text || "").slice(0, 5000);
+
+    if (!username || !subject || !text.trim() || !EMAIL_RE.test(replyTo)) {
+      return res.status(400).send("error");
+    }
+    if (isRateLimited(req.ip)) {
+      return res.status(429).send("error");
+    }
+
+    var mailOptions={
+      from : { name: "Centro Diciotto", address: mailUser },
+      to : contactTo,
+      replyTo : { name: username, address: replyTo },
+      subject : "[Contact form] " + subject,
+      text : "From: " + username + " <" + replyTo + ">\n\n" + text
+    }
 
     smtpTransport.sendMail(mailOptions, function(error, response){
      if(error){
         console.log(error);
-        res.send("error");
+        res.status(500).send("error");
      }
      else{
-        console.log("Message sent: " + mailOptions.text);
-        console.log("We hope you will contact us again " + mailOptions.username + " !");
+        console.log("Contact form message sent from " + replyTo);
         res.send("sent");
         }
   });

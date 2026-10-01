@@ -373,26 +373,21 @@
 				to = $("#recipient_email").val();
 				subject = $("#email_subject").val();
 				text = $("#email_text").val();
-				$("p").remove("#e-status");
-				$("#email_status").append(`<p id="e-status"><br>Sending an email to ${to}...</p>`);
-				$.get("/send",{
-					username:username, 
-					to:to, 
-					subject:subject, 
+				$("#sent_message, #error_message").empty();
+				$("#email_status").empty().append($('<p id="e-status">').text("Sending your message..."));
+				$.post("/send",{
+					username:username,
+					to:to,
+					subject:subject,
 					text:text
-				},function(data){
-        		if(data=="sent"){
-        			$("#error_message").remove();
-        			$("p").remove("#e-response");
-            		$("#sent_message").append(`<p id="e-response">An email has been sent to ${to}. Please check inbox!</p>`);
-            		$("#email_status").empty();
-       			}
-       			else{
-       				$("p").remove("#e-error");
-       				$("#error_message").append(`<p id="e-error">Error! Email cannot be sent to ${to}</p>`);
-       			}
+				}).done(function(){
+					$("#email_status").empty();
+					$("#sent_message").append($('<p id="e-response">').text("Thank you! Your message has been sent, we will reply to " + to + "."));
+				}).fail(function(){
+					$("#email_status").empty();
+					$("#error_message").append($('<p id="e-error">').text("Error! Your message could not be sent. Please check the fields and try again later."));
+				});
 			});
-		});
 		});
 	</script>
 	<!--/ script-->
